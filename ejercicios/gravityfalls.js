@@ -11,17 +11,16 @@ alert("La meta de cada uno es " + metaPersonal);
         var money=prompt("Ingrese el dinero que recogio "+integrantes[i]);
         dinero[i]+=money;
     
-        total+=dinero[i];
-    
         if(dinero[i]>metaPersonal){
          document.write(integrantes[i]+ " Recogio el dinero, " + "(" + parseInt(dinero[i]) + " dolares)" + "<br>")
         }
         else{
          document.write(integrantes[i]+ " No recogio lo suficiente, " + "(" + parseInt(dinero[i]) + " dolares)" + "<br>");
         }
+        total+=parseInt(dinero[i]);
     }
 
-if(total>meta){
+if(total>=meta){
     document.write("<h2>Se logró cumplir con la meta asignada</h2> <br>")
 }
 else{
@@ -29,5 +28,5 @@ else{
 }
 
 for(var o=0;o<porcentajes.length;o++){
-    document.write("El porcentaje de "+ integrantes[o]+" en el total es de "+ (dinero[o]/total*100)+"<br>");
+    document.write("El porcentaje de "+ integrantes[o]+" en el total es de "+ Math.round(dinero[o]/total*100)+ "%<br>");
 }

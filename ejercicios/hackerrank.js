@@ -1,9 +1,4 @@
-var s=7;
-var t=11;
-var a=5;
-var b=15;
-var contM=0;
-var contN=0;
+var s=7;var t=11;var a=5;var b=15;var contM=0;var contN=0;
 var m=[-2,4,5];
 var n=[5,-6];
 
